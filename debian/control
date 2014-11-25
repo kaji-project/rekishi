@@ -11,3 +11,4 @@ Package: rekishi
 Architecture: all
 Depends: ${misc:Depends}, ${python:Depends}, python-django, python-influxdb
 Description: Django application to render reports from Shinken data stored in InfluxDB
+ Get metrics and events from InfluxDB preformatted for DyGraph and Adagios
