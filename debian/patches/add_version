@@ -1,0 +1,7 @@
+Index: rekishi/rekishi/__init__.py
+===================================================================
+--- rekishi.orig/rekishi/__init__.py
++++ rekishi/rekishi/__init__.py
+@@ -1 +1 @@
+-
++__version__ = '0.1'
