@@ -12,6 +12,7 @@ BuildArch:  noarch
 
 BuildRequires: python
 Requires: python
+Requires: python-setuptools
 
 # use to remove the dependency added by rpmbuild on python(abi)
 AutoReqProv: no
