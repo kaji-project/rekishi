@@ -42,7 +42,7 @@ rm -rf  %{buildroot}/%{python_sitelib}/tests
 
 %files
 %{python_sitelib}/rekishi
-%{python_sitelib}/rekishi-%{version}-py2.7.egg-info
+%{python_sitelib}/rekishi-%{version}*.egg-info
 
 %changelog
 * Wed Jan 28 2015 Sébastien Coavoux <sebastien.coavoux@savoirfairelinux.com> 0.1-1kaji0.2
