@@ -7,12 +7,15 @@ Group:		Network
 License:	AGPLv3+
 URL:		https://github.com/kaji-project/rekishi
 Source0:	%{name}_%{version}.orig.tar.gz
-Source1:    %{name}_%{version}-%{release}.debian.tar.xz
 
 BuildArch:  noarch
 
 BuildRequires: python
-Requires python
+Requires: python
+
+# use to remove the dependency added by rpmbuild on python(abi)
+AutoReqProv: no
+
 
 %description
 Django application to render reports from Shinken data stored in InfluxDB
@@ -21,10 +24,6 @@ Django application to render reports from Shinken data stored in InfluxDB
 
 %prep
 %setup -q
-# Untar debian tarball
-tar vxf %{SOURCE1}
-# Apply all patches
-ls .
 for patch_file in $(cat debian/patches/series | grep -v "^#")
 do
 %{__patch} -p1 < debian/patches/$patch_file
