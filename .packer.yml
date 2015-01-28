@@ -1,4 +1,4 @@
 distro:
   - centos_6
-spec: rekishi.spec
+spec: debian/rekishi.spec
 debian: debian
