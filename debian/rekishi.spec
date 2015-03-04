@@ -1,6 +1,6 @@
 Name:		rekishi
 Version:	0.1
-Release:	1
+Release:	2kaji0.2
 Summary:    Django application to render reports from Shinken data stored in InfluxDB
 
 Group:		Network
@@ -45,5 +45,8 @@ rm -rf  %{buildroot}/%{python_sitelib}/tests
 %{python_sitelib}/rekishi-%{version}*.egg-info
 
 %changelog
+* Wed Feb 04 2015 Thibault Cohen <thibault.cohen@savoirfairelinux.com> 0.1-2kaji0.2
+- Fix get data for service name with slashes
+
 * Wed Jan 28 2015 Sébastien Coavoux <sebastien.coavoux@savoirfairelinux.com> 0.1-1kaji0.2
 - Initial Package
