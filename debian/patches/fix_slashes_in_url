@@ -1,0 +1,20 @@
+--- a/rekishi/api/views/host.py
++++ b/rekishi/api/views/host.py
+@@ -41,7 +41,7 @@
+ 
+     base_kw = OrderedDict()
+     base_kw['host'] = host
+-    base_kw['service'] = service
++    base_kw['service'] = unquote(service)
+     base_kw['serie'] = '.*'
+ 
+     get_events = request.GET.get('events', '').lower() == 'true'
+@@ -53,7 +53,7 @@
+ 
+     base_kw = OrderedDict()
+     base_kw['host'] = host
+-    base_kw['service'] = service
++    base_kw['service'] = unquote(service)
+     base_kw['serie'] = unquote(serie)
+ 
+     get_events = request.GET.get('events', '').lower() == 'true'
